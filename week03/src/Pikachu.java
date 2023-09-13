@@ -17,7 +17,4 @@ public class Pikachu extends Pokemon{
 //        return 7;
 //    }
 
-    public void type(){
-        System.out.println(this.name +  " 전기 속성!");
-    }
 }

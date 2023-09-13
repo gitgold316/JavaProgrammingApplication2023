@@ -1,4 +1,4 @@
-package version12;
+
 public class PokemonGame {
     public static void main(String[] args) {
         Squirtle s1 = new Squirtle();

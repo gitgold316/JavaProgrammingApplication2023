@@ -11,6 +11,8 @@ public class Pikachu extends Pokemon{
         this.name = "피카츄";
         //this.flyable = new NoFly(); // Association, Has-a (Composition)
         this.flyable = f;
+        this.skills = new String[]{"백만볼트", "천만볼트", "번개지지기"};
+        this.specialAttackRate = new int[]{80, 100, 70};
     }
 
     @Override

@@ -1,5 +1,7 @@
 package Pokemonster;
 
+import java.util.List;
+
 public abstract class Pokemon {
     //private int level;
     protected int level;
@@ -8,8 +10,10 @@ public abstract class Pokemon {
     protected int attackRate;
     protected int defenceRate;
 
-    protected String[] skills;  // 3가지 skill 추가 예정
-    protected int[] specialAttackRate;
+//    protected String[] skills;  // 3가지 skill 추가 예정
+//    protected int[] specialAttackRate;
+    protected List<String> skills;
+    protected List<Integer> specialAttackRate;
 
     private static int pokemonCount = 0;  // 클래스(정적) 변수
 
@@ -88,9 +92,10 @@ public abstract class Pokemon {
 
         public void attack(Pokemon targetPokemon, int skillNumber){
 //            System.out.println(this.name + "이(가) " + targetPokemon.name + "에게" + skill + "공격 시전~");
-            System.out.println(this.name + "이(가) " + targetPokemon.name + "에게" + this.skills[skillNumber-1] + "공격 시전~");
+//            System.out.println(this.name + "이(가) " + targetPokemon.name + "에게" + this.skills[skillNumber-1] + "공격 시전~");
+            System.out.println(this.name + "이(가) " + targetPokemon.name + "에게" + this.skills.get(skillNumber-1) + "공격 시전~");
 //            System.out.println(this.name + "이(가) " + targetPokemon.name + "에게" + this.skills[skillNumber -1]);
-            int temporaryAttackRate = (this.attackRate + this.specialAttackRate[skillNumber-1]) - targetPokemon.defenceRate;
+            int temporaryAttackRate = (this.attackRate + this.specialAttackRate.get(skillNumber-1)) - targetPokemon.defenceRate;
             if(temporaryAttackRate <= 0)
                 temporaryAttackRate = 0;
             targetPokemon.hp = targetPokemon.hp - (temporaryAttackRate);

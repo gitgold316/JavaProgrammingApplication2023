@@ -65,7 +65,7 @@ public class PokemonGame {
                                 enemy.attack(player, (int) (Math.random() * 3) + 1);
                                 break;
                             } else {
-                            System.out.println("메뉴에서 공격 기술을 선택하세요");
+                            System.out.println("메뉴에서 공격 기술을 선택하세요!!");
                         }
                     }
                 }else if(menu == 2){

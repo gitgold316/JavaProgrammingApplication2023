@@ -1,6 +1,8 @@
-package Pokemonster;
+package fly;
 
-public class Balloon implements Flyable{
+import fly.Flyable;
+
+public class Balloon implements Flyable {
     @Override
     public void fly() {
         System.out.println("풍선을 타고 날아갑니다~~~");

@@ -1,8 +1,9 @@
 package Pokemonster;
 
+import fly.Flyable;
+
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class Charizard extends Pokemon{
     public Charizard(Flyable f) {

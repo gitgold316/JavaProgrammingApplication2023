@@ -4,6 +4,7 @@ import fly.Flyable;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class Pikachu extends Pokemon{
     public Pikachu(Flyable f) {
@@ -17,8 +18,8 @@ public class Pikachu extends Pokemon{
         //this.flyable = new fly.NoFly(); // Association, Has-a (Composition)
         this.flyable = f;
 
-        this.skills = new ArrayList<>(Arrays.asList("백만볼트", "천만볼트", "번개지지기"));
-        this.specialAttackRate = new ArrayList<>(Arrays.asList(90, 65, 30));
+//        this.skills = new ArrayList<>(Arrays.asList("백만볼트", "천만볼트", "번개지지기"));
+//        this.specialAttackRate = new ArrayList<>(Arrays.asList(90, 65, 30));
 //        this.skills = new String[]{"백만볼트", "천만볼트", "번개지지기"};
 //        this.specialAttackRate = new int[]{80, 100, 70};
 //        this.skills.add("백만볼트");
@@ -29,6 +30,16 @@ public class Pikachu extends Pokemon{
 //        this.specialAttackRate.add(80);
 //        this.specialAttackRate.add(100);
 //        this.specialAttackRate.add(70);
+
+        this.skills = new HashMap<>();
+        this.skills.put(1, "백만볼트");
+        this.skills.put(2, "천만볼트");
+        this.skills.put(3, "번개지지기");
+
+        this.specialAttackRate = new HashMap<>();
+        this.specialAttackRate.put("백만볼트", 90);
+        this.specialAttackRate.put("천만볼트", 65);
+        this.specialAttackRate.put("번개지지기", 30);
     }
 
     @Override
